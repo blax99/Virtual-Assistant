@@ -34,7 +34,6 @@ function Customize() {
         }>
           {!frontendImage && <RiImageAddFill className='text-white w-8 h-8 ' />}
           {frontendImage && <img src={frontendImage} className='h-full object-cover'></img>}
-
         </div>
         <input type="file" accept='image/*' ref={inputImage} hidden onChange={handleImage} />
       </div>

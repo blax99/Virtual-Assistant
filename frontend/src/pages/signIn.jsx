@@ -25,7 +25,7 @@ function SignIn() {
       }, { withCredentials: true })
       setLoading(false)
       setUserData(result.data)
-      navigate('/home')
+      navigate('/')
 
     } catch (error) {
       setUserData(null)
