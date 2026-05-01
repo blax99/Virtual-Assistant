@@ -8,6 +8,7 @@ import r9 from '../assets/r9.jpg'
 import { RiImageAddFill } from "react-icons/ri";
 import { userDataContext } from '../context/userContext'
 import { useNavigate } from 'react-router-dom'
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 function Customize() {
   const navigate= useNavigate()
@@ -20,6 +21,7 @@ function Customize() {
   }
   return (
     <div className='w-full h-screen bg-linear-to-t from-[black] to-[#0f0f5a] flex justify-center items-center flex-col'>
+      <IoMdArrowRoundBack className='absolute top-7.5 left-7.5 cursor-pointer text-white w-7 h-6.25 hover:text-amber-600' onClick={()=>navigate('/')}/>
       <h1 className='text-white text-[30px] text-center p-5 mb-4'>Select your <span className='text-blue-700'>Assistant Image</span></h1>
       <div className='w-[90%] max-w-[60%] flex justify-center items-center flex-wrap gap-5'>
         <Card image={r2} />

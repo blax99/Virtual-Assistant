@@ -23,6 +23,7 @@ function Customize2() {
             console.log(result.data);
             setUserData(result.data)
             setLoading(false)
+            navigate('/')
         } catch (error) {
             console.log(error);
             setLoading(false)
