@@ -6,6 +6,7 @@ import authRouter from './routes/auth.routes.js'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import userRouter from './routes/user.routes.js'
+import geminiResponse from './gemini.js'
 const app = express()
 app.use(cors({
     origin:"http://localhost:5173",
@@ -19,9 +20,7 @@ app.use("/api/user",userRouter)
 
 
 const port = process.env.PORT || 5000
-app.get("/",(req, res)=>{
-    res.send('hello!')
-})
+
 
 
 app.listen(port, ()=>{
